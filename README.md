@@ -1,18 +1,34 @@
-Nexora
-======
+# Nexora
 
-A marketplace web application built with PHP, Laravel,
-PostgreSQL, JavaScript and Docker.
+Nexora is a marketplace web application focused on product comparison,
+variants, offers and prices from different stores.
 
 ## Technologies
 
-- PHP
-- Laravel
+- PHP 8.5
+- Laravel 13
 - PostgreSQL
 - JavaScript
-- HTML
-- CSS
+- Blade
+- Tailwind CSS
+- Vite
 - Docker
+- Docker Compose
+
+## Current Features
+
+- Product detail page
+- Product image gallery
+- Product categories
+- Product attributes and variants
+- Variant selection
+- Store offers
+- Price comparison
+- Stock information
+
+## Development
+
+The project is currently under active development.
 
 ## Status
 
