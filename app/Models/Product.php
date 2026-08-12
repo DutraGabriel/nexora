@@ -22,8 +22,18 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function offers(): HasMany
+    public function images(): HasMany
     {
-        return $this->hasMany(Offer::class);
+        return $this->hasMany(ProductImage::class);
+    }
+
+    public function variants(): HasMany
+    {
+        return $this->hasMany(ProductVariant::class);
+    }
+
+    public function attributes(): HasMany
+    {
+        return $this->hasMany(ProductAttribute::class);
     }
 }
