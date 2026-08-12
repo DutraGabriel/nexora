@@ -1,0 +1,30 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: nexora_app
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - nexora
+
+  db:
+    image: postgres:18
+    container_name: nexora_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nexora
+      POSTGRES_USER: nexora
+      POSTGRES_PASSWORD: nexora
+    volumes:
+      - nexora_db_data:/var/lib/postgresql
+    networks:
+      - nexora
+
+networks:
+  nexora:
+
+volumes:
+  nexora_db_data:
