@@ -16,6 +16,7 @@ class Offer extends Model
         'stock',
         'condition',
         'is_active',
+        'url',
     ];
 
     protected function casts(): array

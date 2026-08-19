@@ -375,11 +375,25 @@ return [
 
                         @endif
 
-                        <button
-                            type="button"
+                        @if ($offer->url)
+
+                        <a
+                            href="{{ $offer->url }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="mt-3 rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-700">
                             Ver oferta
-                        </button>
+                        </a>
+
+                        @else
+
+                        <span
+                            class="mt-3 cursor-not-allowed rounded-lg bg-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-500"
+                            aria-disabled="true">
+                            Oferta sem URL
+                        </span>
+
+                        @endif
 
                     </div>
 
