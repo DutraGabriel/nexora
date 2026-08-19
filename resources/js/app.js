@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector("[data-menu-toggle]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
+    const menuOpenIcon = document.querySelector("[data-menu-open-icon]");
+    const menuCloseIcon = document.querySelector("[data-menu-close-icon]");
+
+    menuToggle?.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuToggle.setAttribute("aria-label", isExpanded ? "Abrir menu" : "Fechar menu");
+        mobileMenu?.classList.toggle("hidden", isExpanded);
+        menuOpenIcon?.classList.toggle("hidden", !isExpanded);
+        menuCloseIcon?.classList.toggle("hidden", isExpanded);
+    });
+
     /*
     |--------------------------------------------------------------------------
     | Dados do produto
