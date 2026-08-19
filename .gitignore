@@ -27,3 +27,5 @@ docker-compose.override.yml
 /storage/framework/sessions/*
 /storage/framework/testing/*
 /storage/framework/views/*
+# Laravel public storage symlink
+/public/storage
